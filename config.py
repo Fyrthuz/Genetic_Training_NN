@@ -1,0 +1,50 @@
+"""Configuración central del experimento."""
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parent
+DATA_DIR = PROJECT_ROOT / "data"
+RESULTS_DIR = PROJECT_ROOT / "results"
+TB_DIR = RESULTS_DIR / "tb"
+PLOTS_DIR = PROJECT_ROOT / "plots"
+
+DATASETS = ["mnist", "cifar10"]
+ARCHS = ["mlp", "cnn"]
+METHODS = ["bp", "ga"]
+
+SEEDS = [0, 1, 2]
+
+NUM_CLASSES = 10
+SPLIT_SEED = 42
+VAL_FRACTION = 0.15
+TEST_FRACTION = 0.15
+
+DATASET_MEAN_STD = {
+    "mnist": ((0.1307,), (0.3081,)),
+    "cifar10": ((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616)),
+}
+
+MLP_HIDDENS = [256, 128]
+CNN_CONV1 = 32
+CNN_CONV2 = 64
+CNN_FC = 128
+
+BP_EPOCHS = 60
+BP_BATCH_SIZE = 128
+BP_LR = 1e-3
+BP_WEIGHT_DECAY = 1e-4
+BP_PATIENCE = 10
+BP_TRAIN_LOG_IMAGES_EVERY = 5
+BP_METRICS_EVERY = 10
+
+GA_POP_SIZE = 200
+GA_GENERATIONS = 1500
+GA_FITNESS_SUBSET = 4096
+GA_TOURNAMENT_K = 3
+GA_ELITE = 10
+GA_CX_PROB = 0.5
+GA_MUT_PROB_START = 0.20
+GA_MUT_PROB_END = 0.05
+GA_MUT_STD_START = 0.1
+GA_MUT_STD_END = 0.005
+GA_METRICS_EVERY = 10
+GA_IMAGES_EVERY = 5

@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Datasets descargados (se regeneran con download=True)
+data/
+
+# TensorBoard events (voluminosos)
+results/tb/
+
+# Modelos guardados (pesos)
+*.pt
+
+# Logs
+results/*.log
+results/run_log.txt
+
+# Mantener los JSON de métricas y CSVs resumen (importantes)
+!results/**/metrics.json
+!results/summary*.csv

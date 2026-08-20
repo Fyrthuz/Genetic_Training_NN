@@ -1,0 +1,16 @@
+[project]
+name = "geneticnn"
+version = "0.1.0"
+description = "Comparativa Backpropagation vs Algoritmo Genetico (MNIST y CIFAR-10)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "torch>=2.7.0",
+    "torchvision>=0.22.0",
+    "numpy>=2.0.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.9.0",
+    "tqdm>=4.66.0",
+    "tensorboard>=2.17.0",
+    "umap-learn>=0.5.6",
+]
