@@ -174,7 +174,3 @@ GeneticNN/
   results/                # metrics.json + summary.csv + tb/
   plots/                  # plots generados
 ```
-
-## Resultados de CIFAR-10
-
-Pendientes (el experimento corre en segundo plano; se documentarán al terminar).
